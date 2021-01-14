@@ -100,6 +100,7 @@ const PaymentDetails = () => {
                        
                         const configOrder = {
                             orderTotal: total,
+                            
                             orderItems: cartItems.map(item => {
                                 const { documentID, productThumbnail, productName, productPrice, quantity } = item
                                 return {
@@ -107,7 +108,7 @@ const PaymentDetails = () => {
                                     productThumbnail, 
                                     productName, 
                                     productPrice, 
-                                    quantity
+                                    quantity,
                                 }
                             })
 
