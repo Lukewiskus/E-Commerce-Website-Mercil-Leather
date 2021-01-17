@@ -140,7 +140,7 @@ const Admin = props => {
                         Hello {currentUser.displayName}
                     </h1>
                 </div>
-                <AddProductModal {...configProductModal}>
+                <AddProductModal className="addProductModal" {...configProductModal}>
                  <div className="addNewProductForm">
                      <form onSubmit={handleSubmit}>
                          <h2>
@@ -199,9 +199,9 @@ const Admin = props => {
                             //on a change, use the setter we made, and the evt.editor.getData() is from the dependicy itself
                             onChange={evt => setProductDescription(evt.editor.getData())}
                             />
-                            <Button type="submit">
+                                                        <Button type="submit">
                                 Add product
-                            </Button>  
+                            </Button> 
                     </form>
                 </div>
             </AddProductModal>
@@ -225,10 +225,6 @@ const Admin = props => {
                         </tr>
                     </tbody>
                 </table>
-                
-                
-                
-                
 
                 <h1>
                 Filter Your Products:

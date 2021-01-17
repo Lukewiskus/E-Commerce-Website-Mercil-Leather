@@ -2,10 +2,13 @@
   display: block;
   margin: 0 auto;
   width: 80%;
-  .addNewProductForm {
-    margin-bottom: 20rem;
-    .btn {
-      margin-bottom: 20rem;
+  .modal {
+    width: 60rem;
+    height: 100%;
+    .addNewProductForm {
+      .btn {
+        margin-bottom: 0;
+      }
     }
   }
   .topWrap {
