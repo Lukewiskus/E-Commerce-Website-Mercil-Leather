@@ -1,6 +1,6 @@
-
+import React, { useState, useEffect } from 'react';
 import "./styles.scss";
-import { useHistory } from 'react-router-dom';
+import { useHistory,  } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { resetPasswordStart, resetUserState } from './../../redux/User/user.actions';
 
