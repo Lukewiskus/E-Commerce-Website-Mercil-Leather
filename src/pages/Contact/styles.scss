@@ -1,6 +1,7 @@
 .contactMe {
   padding-bottom: 30rem;
-
+  display: block;
+  margin: 0 auto;
   ul li {
     text-align: center;
     padding-top: 2rem;
@@ -9,11 +10,13 @@
   }
 }
 
-@media (min-width: 300px) {
+@media only screen and (max-device-width: 480px) {
   .contactMe {
-    width: 60rem;
+    padding-right: 5rem;
+    width: 40rem;
     padding-bottom: 30rem;
-    padding-left: 12rem;
+    display: block;
+    margin: 0 auto;
     ul li {
       text-align: center;
       padding-top: 2rem;
