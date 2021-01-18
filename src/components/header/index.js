@@ -51,7 +51,7 @@ const signOut = () => {
                         </td>
                         <td> 
                         <Link id="products"to="/products">
-                            Products
+                            Leather Work
                         </Link>
                         </td>
                         <td>

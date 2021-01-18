@@ -1,0 +1,35 @@
+.editHomepageWrapper {
+  .btn {
+    margin-top: 1rem;
+    width: 30rem;
+  }
+  .galleryImages {
+    table {
+      margin: 0 auto;
+      tbody {
+        tr {
+          td {
+            border-bottom: 1px solid grey;
+            padding: 1rem 5rem;
+            img {
+              border: 10px solid black;
+              width: 25rem;
+              height: 25rem;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+  .editHomepageDesc {
+    padding-top: 2rem;
+    padding-bottom: 20rem;
+
+    span {
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 500;
+    }
+  }
+}

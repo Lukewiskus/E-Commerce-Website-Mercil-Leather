@@ -5,10 +5,13 @@
   .modal {
     width: 60rem;
     height: 80%;
-    overflow-y: auto;
+
     .addNewProductForm {
       .btn {
         margin-bottom: 0;
+      }
+      .uploadBTN {
+        padding-bottom: 2rem;
       }
     }
   }
@@ -41,6 +44,7 @@
         vertical-align: middle;
         border-bottom: 1px black;
         img {
+          border: 5px solid black;
           max-width: 30rem;
           max-height: 30rem;
         }
@@ -79,6 +83,7 @@
         vertical-align: middle;
         border-bottom: 1px black;
         img {
+          border: 5px solid black;
           max-width: 20rem;
           max-height: 20rem;
         }

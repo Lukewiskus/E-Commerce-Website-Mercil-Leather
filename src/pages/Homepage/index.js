@@ -1,26 +1,34 @@
-import React, { Component } from 'react';
+import React, {  useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import ReactDOM from 'react-dom'
 import Ben from './../../assets/benFace.jpg';
 import Carousel from 'react-elastic-carousel';
-import logo from "./logo.png"
-import Image1 from "./images/AldenWallet.jpg"
-import Image2 from "./images/Kuzi.jpg";
-import Image3 from "./images/OtherWallet.jpg";
-import Image4 from "./images/ToteBag.jpg";
-import Image5 from "./images/Wallet3.jpg";
+import { fetchGalleryStart, fetchHomepageDescription } from './../../redux/Gallery/gallery.actions'
 import './styles.scss';
 
-const home = props => {
-    const state = {
-        items: [
-          {id: 1, title: logo},
-          {id: 2, title: Image1},
-          {id: 3, title: Image2},
-          {id: 4, title: Image3},
-          {id: 5, title: Image4},
-          {id: 5, title: Image5}
-        ]
-      }
+const mapState = state => ({
+    gallery: state.galleryData.galleryImages.data,
+    homepageDesc: state.galleryData.homepageDescription.data
+});
+
+const HomePage = () => {
+    const { gallery,homepageDesc } = useSelector(mapState);
+    const dispatch = useDispatch()
+    useEffect(() => {
+        
+        dispatch(
+            fetchGalleryStart(),
+
+        )
+    }, []);
+    useEffect(() => {
+        
+        dispatch(
+            fetchHomepageDescription(),
+
+        )
+    }, []);
+
     return (
         <div className="homepageWrapper">
             <table border="0" cellPadding="10" cellSpacing="10">
@@ -28,21 +36,19 @@ const home = props => {
                     <tr className="row1">
                         <td className="imageOfBen">
                             <img className="profileImage"src={Ben} />
-                            <p>
-                            These are placeholder words for the homepage description. These are placeholder words for the homepage description.
-                            These are placeholder words for the homepage description. These are placeholder words for the homepage description.
-                            These are placeholder words for the homepage description. These are placeholder words for the homepage description.
-                            These are placeholder words for the homepage description. These are placeholder words for the homepage description.
-                            These are placeholder words for the homepage description. These are placeholder words for the homepage description.
-                            </p>
+                            {Array.isArray(homepageDesc) && homepageDesc.map(homepageDesc => 
+                                <p>
+                                    <span dangerouslySetInnerHTML={{__html: homepageDesc.desc}} />
+                                </p>
+                            )}
                         </td>
                     </tr>
                     <tr className="row2">
                     <div className="carouselWrapper">
                     <Carousel className="carousel">
-                        {state.items.map(item => 
-                        <div key={item.id}>
-                            <img className="carouselImage"src={item.title} />
+                        {Array.isArray(gallery) && gallery.map(galleryItem => 
+                        <div key={galleryItem}>
+                            <img className="carouselImage" src={galleryItem.imageURL} />
                         </div>)}
                     </Carousel>
                     </div>
@@ -74,4 +80,4 @@ const home = props => {
 
     )
 }
-export default home;
+export default HomePage;

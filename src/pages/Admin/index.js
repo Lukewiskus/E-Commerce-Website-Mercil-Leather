@@ -222,6 +222,13 @@ const Admin = props => {
                             </Button>
                             </Link>
                             </td>
+                            <td>
+                            <Link to={'edit-homepage'}>
+                            <Button className="btn addProduct">
+                                Edit Homepage
+                            </Button>
+                            </Link>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

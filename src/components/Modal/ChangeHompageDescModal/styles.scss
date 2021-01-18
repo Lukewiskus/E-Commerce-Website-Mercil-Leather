@@ -1,4 +1,4 @@
-.modalOverlay {
+.modalChangeHomepageDescOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,7 +7,7 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.modalWrap {
+.modalChangeHomepageDescWrap {
   position: fixed;
   top: 0;
   left: 0;
@@ -15,10 +15,10 @@
   height: 100%;
   pointer-events: none;
 
-  .modal {
+  .modalChangeHomepageDesc {
+    overflow-y: auto;
     border: 10px solid black;
     position: absolute;
-    overflow-y: auto;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);

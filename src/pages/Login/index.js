@@ -87,7 +87,7 @@ const SignIn = props => {
                     <Link id="forgotPassword" to="/recovery">
                         Forgot Password?
                     </Link>
-                    <Button type="submit">
+                    <Button onClick={handleSubmit}>
                         LogIn
                     </Button>
                     

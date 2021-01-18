@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
+import galleryReducer from './Gallery/gallerys.reducer'
 import ordersReducer from './Orders/orders.reducers'
 import userReducer from './User/user.reducer';
 import productsReducer from './Products/products.reducer';
@@ -13,6 +14,7 @@ export const rootReducer = combineReducers({
     productsData: productsReducer,
     cartData: cartReducer,
     ordersData: ordersReducer,
+    galleryData: galleryReducer
 });
 
 

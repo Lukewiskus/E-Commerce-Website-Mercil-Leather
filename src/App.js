@@ -18,6 +18,7 @@ import AdminLayout from './layouts/AdminLayout';
 
 //pages
 import './default.scss';
+import EditHomepage from './pages/EditHompage'
 import AllOrders from './pages/AllOrders'
 import Order from './pages/Order'
 import Dashboard from './pages/Dashboard'
@@ -63,6 +64,15 @@ const App = props =>  {
             <WithAdminAuth>
               <MainLayout>
                   <Admin/>
+              </MainLayout>
+            </WithAdminAuth>
+          )}/>
+          <Route path="/edit-homepage"
+          render = {() => (
+            //withAuth makes it so you get redirected to login if you are not logged in trying to access it
+            <WithAdminAuth>
+              <MainLayout>
+                  <EditHomepage/>
               </MainLayout>
             </WithAdminAuth>
           )}/>

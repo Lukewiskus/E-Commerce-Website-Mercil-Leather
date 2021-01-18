@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCompleteOrderHistory } from './../../redux/Orders/orders.actions';
 import OrderHistory from './../../components/OrderHistory'
+import { useHistory} from 'react-router-dom';
+import Button from './../../components/forms/Button'
 import './styles.scss';
 
 const mapState = ({ ordersData }) => ({
@@ -10,6 +12,7 @@ const mapState = ({ ordersData }) => ({
 
 const AllOrders = props => {
     const dispatch = useDispatch();
+    const history = useHistory();
     const { completeOrderHistory } = useSelector(mapState);
 
     useEffect(() => {
@@ -24,6 +27,9 @@ const AllOrders = props => {
                 All Orders
             </h1>
             <OrderHistory orders={completeOrderHistory}/>
+            <Button className="btn goBackButton"onClick={() => history.goBack()}>
+                Go Back
+            </Button>
         </div>
     );
     }
