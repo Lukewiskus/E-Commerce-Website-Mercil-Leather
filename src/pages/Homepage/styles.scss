@@ -30,22 +30,20 @@
             margin: 0 auto;
             padding-bottom: 10rem;
             .carouselImage {
-              width: 67rem;
+              border: 15px solid black;
+              width: 80rem;
               height: 67rem;
-              object-fit: contain;
+              object-fit: cover;
             }
           }
         }
       }
       .row3 {
-        .contactMe {
+        .contactMeHomepage {
           display: block;
-          width: 60rem;
           padding-bottom: 30rem;
           margin: 0 auto;
           ul {
-            margin: 0 auto;
-            margin-right: 15rem;
             li {
               text-align: center;
               padding-top: 2rem;
@@ -104,15 +102,14 @@
         }
       }
       .row3 {
-        .contactMe {
-          width: 60rem;
+        .contactMeHomepage {
           padding-bottom: 10rem;
-          display: block;
-
+          width: 60rem;
           ul {
-            margin-right: 15rem;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
             li {
-              text-align: center;
               padding-top: 2rem;
               h1 {
                 text-align: center;

@@ -48,7 +48,7 @@ const home = props => {
                     </div>
                     </tr>
                     <tr className="row3">
-                    <div className="contactMe">
+                    <div className="contactMeHomepage">
                         <ul>
                             <li>
                                 <h1>
