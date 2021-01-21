@@ -1,4 +1,4 @@
-import React, {  useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ReactDOM from 'react-dom'
 import Ben from './../../assets/benFace.jpg';
@@ -12,17 +12,17 @@ const mapState = state => ({
 });
 
 const HomePage = () => {
-    const { gallery,homepageDesc } = useSelector(mapState);
+    const { gallery, homepageDesc } = useSelector(mapState);
     const dispatch = useDispatch()
     useEffect(() => {
-        
+
         dispatch(
             fetchGalleryStart(),
 
         )
     }, []);
     useEffect(() => {
-        
+
         dispatch(
             fetchHomepageDescription(),
 
@@ -31,51 +31,31 @@ const HomePage = () => {
 
     return (
         <div className="homepageWrapper">
-            <table border="0" cellPadding="10" cellSpacing="10">
+            <table>
                 <tbody>
-                    <tr className="row1">
-                        <td className="imageOfBen">
-                            <img className="profileImage"src={Ben} />
-                            {Array.isArray(homepageDesc) && homepageDesc.map(homepageDesc => 
+                    <tr>
+                        <td>
+                            <img className="profileImage" src={Ben} />
+                        </td>
+                        <td>
+                            {Array.isArray(homepageDesc) && homepageDesc.map(homepageDesc =>
                                 <p>
-                                    <span dangerouslySetInnerHTML={{__html: homepageDesc.desc}} />
+                                    <span dangerouslySetInnerHTML={{ __html: homepageDesc.desc }} />
                                 </p>
                             )}
                         </td>
                     </tr>
-                    <tr className="row2">
-                    <div className="carouselWrapper">
-                    <Carousel className="carousel">
-                        {Array.isArray(gallery) && gallery.map(galleryItem => 
+                </tbody>
+
+            </table>
+            <div className="carouselWrapper">
+                <Carousel className="carousel">
+                    {Array.isArray(gallery) && gallery.map(galleryItem =>
                         <div key={galleryItem}>
                             <img className="carouselImage" src={galleryItem.imageURL} />
                         </div>)}
-                    </Carousel>
-                    </div>
-                    </tr>
-                    <tr className="row3">
-                    <div className="contactMeHomepage">
-                        <ul>
-                            <li>
-                                <h1>
-                                    Interested In Something Custom? Contact Me At
-                                </h1>
-                            </li>
-                            <li>
-                                555-555-5555
-                            </li>
-                            <li>
-                                exampleEmail@email.com
-                            </li>
-                            <li>
-                                Instagram, Facebook, ect..
-                            </li>
-                        </ul>
-                    </div>
-                    </tr>
-                </tbody>
-            </table>
-            
+                </Carousel>
+            </div>
         </div>
 
     )
