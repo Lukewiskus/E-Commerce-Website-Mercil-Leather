@@ -1,11 +1,19 @@
 html {
   font-size: 10px;
+  
 }
 
 html,
 body {
+  // background-image: url(https://firebasestorage.googleapis.com/v0/b/mercil-leather-website.appspot.com/o/images%2FCard.jpg?alt=media&token=9e48e392-71f0-4296-87c6-c585faacbde7);
+  // background-repeat: no-repeat;
+  // background-attachment:fixed;
+  // background-size:cover;
+  // background-position: 0%;
+  // object-fit: contain;
   padding: 0;
   margin: 0;
+  z-index: -1000;
 }
 
 html,
@@ -25,9 +33,9 @@ body,
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 200 !important;
   line-height: 1;
 }
 
@@ -40,7 +48,6 @@ h1 {
   line-height: 3.2rem;
   color: #000000;
   text-align: left;
-  font-weight: 400;
   text-transform: uppercase;
   border-bottom: #d3d3d3;
 }
@@ -54,7 +61,6 @@ h2 {
   line-height: 2.7rem;
   color: #000000;
   text-align: left;
-  font-weight: 400;
   text-transform: uppercase;
   border-bottom: #d3d3d3;
 }

@@ -1,48 +1,58 @@
-.navBar {
-  height: 25rem;
-  table.centerHead {
-    margin-left: auto;
-    margin-right: auto;
-    a {
-      width: 100%;
-      text-decoration: none;
-      color: black;
-      font-size: 3.4rem;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      padding: 0 16px;
-      border-radius: 4px;
+.header-wrapper {
+  
+  table{
+    background-color: white;
+    border-collapse: collapse;
+    tbody{
+      tr{
+        td{
+          background-color: white;
+          padding-right: 0 !important;
+          margin-right: 0 !important;
+          padding: 0;
+          img{
+            width:35rem;
+            height:30rem;
+            border-bottom: 10px solid black;
+            border-right: 10px solid black;
+            object-fit: contain;           
+          }
+          table {
+            
+            border-bottom: 10px solid black;
+            padding: 0;
+            margin: 0;
+            padding-left: 0rem;
+
+            tbody{
+              tr {
+                
+                td{
+                  background-color: white;
+                  .menuBars{
+                    padding-left: 1rem;
+                    margin-left: 0;
+                  }
+                  
+                  padding: 0;
+                  padding-left: 10rem;
+                  padding-bottom: 4rem;
+                  a {
+                    color: black;
+                    text-decoration: none;
+                    font-size: 4rem;
+                    width: 100rem !important;
+                  }
+                }
+                .cartIcon{
+                  width: 500rem !important;
+                }
+              }
+            }
+          }
+        }
+      }
     }
-  }
-  .logo {
-    width: 25rem;
-    height: 25rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .aboutBen {
-    margin: 0 auto;
-  }
-  .menuBars {
-    float: Left;
-    font-size: 3rem;
-    margin-left: 2rem;
-    margin-top: 1rem;
-    background: none;
-    cursor: pointer;
-  }
-  .cart {
-    margin: 0 auto;
-    float: right;
-    padding-right: 5rem;
-    padding-top: 1.4rem;
-    font-size: 3rem;
-    vertical-align: middle;
-    text-decoration: none;
-    color: black;
-    vertical-align: top;
   }
 }
 
@@ -137,3 +147,79 @@
     }
   }
 }
+
+
+// .navBar {
+//   height: 25rem;
+//   table.centerHead {
+//     padding: 0;
+//     tbody tr td{
+//       margin-left: 0;
+//       padding: 0;
+//       width: 60rem;
+//     }
+//     tbody tr td table { 
+//       border-bottom: 5px solid black;
+//       padding-left: 0;
+//       tbody {
+        
+//         tr {
+//           padding: 5px 0px;
+//           display: flex;
+//           justify-content: space-between;
+//           align-items: center;
+//         td {
+//           .aboutBen {
+//             max-width: 15rem;
+//             margin: 0 auto;
+//           }
+//           .menuBars {
+//             max-width: 15rem;
+//             float: Right;
+//             font-size: 3rem;
+//             margin-left: 2rem;
+//             margin-top: 1rem;
+//             background: none;
+//             cursor: pointer;
+//           }
+//           .cart {
+//             max-width: 15rem;
+//             margin: 0 auto;
+//             float: right;
+//             padding-right: 5rem;
+//             padding-top: 1.4rem;
+//             font-size: 3rem;
+//             vertical-align: middle;
+//             text-decoration: none;
+//             color: black;
+//             vertical-align: top;
+//           }
+//         }
+//         a {
+//           text-decoration: none;
+//           color: black;
+//           font-size: 3.4rem;
+//           height: 100%;
+//           display: flex;
+//           align-items: center;
+//           border-radius: 4px;
+//         }
+//       }
+//     }
+//     }
+//   }
+//   }
+//   .logo {
+//     width: 35rem;
+//     height: 25rem;
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+//     border-bottom: 5px solid black;
+//     border-right: 5px solid black;
+//     padding: 0;
+//     object-fit: contain;
+
+//   }
+  
+

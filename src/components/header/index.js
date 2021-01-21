@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import * as AiIcons from 'react-icons/ai';
 import { navBarDataSignedOut, navBarDataSignedIn, navBarDataAuth } from './NavbarData';
 import { IconContext } from 'react-icons';
-import {signOutUserStart} from './../../redux/User/user.actions'
+import { signOutUserStart } from './../../redux/User/user.actions'
 import { selectCartItemsCount } from './../../redux/Cart/cart.selectors';
 import { checkUserIsAdmin } from './../../Utils';
 import * as FaIcons from "react-icons/fa";
@@ -24,116 +24,160 @@ const Header = props => {
     const [sidebar, setSideBar] = useState(false);
     const showSideBar = () => setSideBar(!sidebar);
     const isAdmin = checkUserIsAdmin(currentUser);
-const signOut = () => {
-    dispatch(signOutUserStart());
-}
-    
+    const signOut = () => {
+        dispatch(signOutUserStart());
+    }
+
     return (
         <>
-        <div className="navBar">
-            <table className="centerHead">
-                <tbody>
-                    <tr>
-                        <td>
-                        <Link to="#" className="menuBars">
-                            <FaIcons.FaBars onClick={showSideBar}/>
-                        </Link>
-                        </td>
-                        <td>
-                        <Link className="aboutBen"to="/">
-                            About Ben
-                        </Link>
-                        </td>
-                        <td>
-                            <Link to="/">
-                            <img className="logo" src={logo} />
-                            </Link>
-                        </td>
-                        <td> 
-                        <Link id="products"to="/products">
-                            Leather Work
-                        </Link>
-                        </td>
-                        <td>
-                        <Link className="cart" to="/cart" >
-                            <FaIcons.FaShoppingCart/> ({totalNumCartItems})
-                        </Link>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>         
-        </div>
-        <IconContext.Provider value={{color: 'white'}}>
-        
-        <nav className={sidebar ? 'navMenu active':'navMenu'}>
-            
-            <ul className="navMenuItems" onClick={showSideBar}>
-                <li className="navBarToggle">
-                        <span className="menuBars">
-                        <AiIcons.AiOutlineClose />
-                        </span>
-                </li>
-                {!currentUser && [
-                    <ul>
-                    
-                    <li>
-                        {navBarDataSignedOut.map((item, index) => {
-                            return (
-                                <li key={index} className={item.className}>
-                                <Link to={item.path}>
-                                    {item.icon}
-                                    <span>{item.title}</span>
+            <div className="header-wrapper">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <Link to="/">
+                                    <img className="logo" src="https://firebasestorage.googleapis.com/v0/b/mercil-leather-website.appspot.com/o/images%2FCard%202.jpg?alt=media&token=22977b75-4b18-427e-a862-9a14a97dd62d" />
                                 </Link>
-                                </li>
-                            )
-                        })}
-                    </li>
-                </ul>]}
-                {currentUser && isAdmin && [
-                    <ul>
-                    <li>
-                        {navBarDataAuth.map((item, index) => {
-                            return (
-                                <li key={index} className={item.className}>
-                                <Link to={item.path}>
-                                    {item.icon}
-                                    <span>{item.title}</span>
-                                </Link>
-                                </li>
-                            )
-                        })}
-                    </li>
-                    <li>
-                        <span className="navText" onClick={() => signOut()}>
-                            SignOut
-                        </span>
-                    </li>
-                </ul>
-                ]}
-                {currentUser && !isAdmin && [
-                    <ul>
-                    <li>
-                        {navBarDataSignedIn.map((item, index) => {
-                            return (
-                                <li key={index} className={item.className}>
-                                <Link to={item.path}>
-                                    {item.icon}
-                                    <span>{item.title}</span>
-                                </Link>
-                                </li>
-                            )
-                        })}
-                    </li>
-                    <li>
-                        <span className="navText" onClick={() => signOut()}>
-                            SignOut
-                        </span>
-                    </li>
-                </ul>]}
+                            </td>
+                            <td>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td className="menuBars">
+                                                <Link to="#" className="menuBars">
+                                                    <FaIcons.FaBars onClick={showSideBar} />
+                                                </Link>
+                                            </td>
+                                            <td>
+                                                <Link to="/">
+                                                    About
+                                                </Link>
+                                            </td>
+                                            <td className="leatherWork">
+                                                <Link className="products" to="/products">
+                                                    Leather Work
+                                                </Link>
+                                            </td>
+                                            <td>
+                                                <Link to="/contact">
+                                                    Contact
+                                                </Link>
+                                            </td>
+                                            <td className="cartIcon">
+                                                <Link className="cart" to="/cart" >
+                                                    Custom
+                                                    {/* <FaIcons.FaShoppingCart /> ({totalNumCartItems}) */}
+                                                </Link>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            {/* <div className="navBar">
+                <table className="centerHead">
+                    <tbody>
+                        <tr>
+                            <td>
+                                
+                            </td>
+                            <td class>
+                                <table id="headerOptions">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <Link to="#" className="menuBars">
+                                                    <FaIcons.FaBars onClick={showSideBar} />
+                                                </Link>
+                                            </td>
 
-            </ul>
-        </nav>
-        </IconContext.Provider>
+                                            
+                                            </td>
+                                            
+                                            
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div> */}
+            <IconContext.Provider value={{ color: 'white' }}>
+
+                <nav className={sidebar ? 'navMenu active' : 'navMenu'}>
+
+                    <ul className="navMenuItems" onClick={showSideBar}>
+                        <li className="navBarToggle">
+                            <span className="menuBars">
+                                <AiIcons.AiOutlineClose />
+                            </span>
+                        </li>
+                        {!currentUser && [
+                            <ul>
+
+                                <li>
+                                    {navBarDataSignedOut.map((item, index) => {
+                                        return (
+                                            <li key={index} className={item.className}>
+                                                <Link to={item.path}>
+                                                    {item.icon}
+                                                    <span>{item.title}</span>
+                                                </Link>
+                                            </li>
+                                        )
+                                    })}
+                                </li>
+                            </ul>]}
+                        {currentUser && isAdmin && [
+                            <ul>
+                                <li>
+                                    {navBarDataAuth.map((item, index) => {
+                                        return (
+                                            <li key={index} className={item.className}>
+                                                <Link to={item.path}>
+                                                    {item.icon}
+                                                    <span>{item.title}</span>
+                                                </Link>
+                                            </li>
+                                        )
+                                    })}
+                                </li>
+                                <li>
+                                    <span className="navText" onClick={() => signOut()}>
+                                        SignOut
+                        </span>
+                                </li>
+                            </ul>
+                        ]}
+                        {currentUser && !isAdmin && [
+                            <ul>
+                                <li>
+                                    {navBarDataSignedIn.map((item, index) => {
+                                        return (
+                                            <li key={index} className={item.className}>
+                                                <Link to={item.path}>
+                                                    {item.icon}
+                                                    <span>{item.title}</span>
+                                                </Link>
+                                            </li>
+                                        )
+                                    })}
+                                </li>
+                                <li>
+                                    <span className="navText" onClick={() => signOut()}>
+                                        SignOut
+                        </span>
+                                </li>
+                            </ul>]}
+
+                    </ul>
+                </nav>
+            </IconContext.Provider>
         </>
     )
 }
