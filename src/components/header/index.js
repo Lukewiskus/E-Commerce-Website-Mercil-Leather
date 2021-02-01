@@ -65,8 +65,7 @@ const Header = props => {
                                             </td>
                                             <td className="cartIcon">
                                                 <Link className="cart" to="/cart" >
-                                                    Custom
-                                                    {/* <FaIcons.FaShoppingCart /> ({totalNumCartItems}) */}
+                                                    <FaIcons.FaShoppingCart /> ({totalNumCartItems})
                                                 </Link>
                                             </td>
                                         </tr>

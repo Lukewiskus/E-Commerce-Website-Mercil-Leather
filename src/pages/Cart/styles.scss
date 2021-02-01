@@ -1,7 +1,7 @@
 .checkoutWrap {
   margin: 0 auto;
-
   padding-top: 5rem;
+  padding-bottom: 10rem;
   .cart {
     button.btn {
       max-width: 40rem;
@@ -70,11 +70,13 @@
     cursor: pointer;
   }
   .noItem {
+    display: block;
     width: 35rem;
     margin: 0 auto;
     padding-bottom: 2rem;
     p {
-      margin-left: 10rem;
+      display: block;
+      margin: 0 auto;
       text-align: center;
       width: 15rem;
       padding-bottom: 2rem;

@@ -46,7 +46,6 @@ const HomePage = () => {
                         </td>
                     </tr>
                 </tbody>
-
             </table>
             <div className="carouselWrapper">
                 <Carousel className="carousel">

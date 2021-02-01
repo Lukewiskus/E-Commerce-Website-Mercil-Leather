@@ -105,6 +105,8 @@ export function* onFetchProductStart(){
     yield takeLatest(productsTypes.FETCH_PRODUCT_START, fetchProduct)
 }
 
+
+
 export default function* productsSagas() {
     yield all([
         call(onAddProductStart),

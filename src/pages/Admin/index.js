@@ -77,14 +77,11 @@ const Admin = props => {
             productDescription,
         })
         );
-        console.log("look here")
-        console.log(productName)
         dispatch(uploadImageStart({
             thisImage: image,
             name: image.name,
             id: productName
-        }))
-        
+        }))        
         setTimeout(() => {  dispatch(fetchProductsStart({ filterType })
         ) }, 1000);
         resetForm()
@@ -199,7 +196,7 @@ const Admin = props => {
                             //on a change, use the setter we made, and the evt.editor.getData() is from the dependicy itself
                             onChange={evt => setProductDescription(evt.editor.getData())}
                             />
-                                                        <Button type="submit">
+                            <Button type="submit">
                                 Add product
                             </Button> 
                     </form>
