@@ -45,10 +45,10 @@
         border-bottom: 1px black;
         img {
           border: 5px solid black;
-          max-width: 30rem;
-          max-height: 30rem;
-        }
-      }
+          width: 30rem;
+          height: 30rem;
+          object-fit: cover;
+        }      }
     }
   }
 }
@@ -84,9 +84,11 @@
         border-bottom: 1px black;
         img {
           border: 5px solid black;
-          max-width: 20rem;
-          max-height: 20rem;
+          width: 20rem;
+          height: 20rem;
+          object-fit: cover;
         }
+        
       }
     }
   }

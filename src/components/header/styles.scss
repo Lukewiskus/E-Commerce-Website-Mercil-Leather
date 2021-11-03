@@ -1,11 +1,16 @@
 .header-wrapper {
   
   table{
+
     background-color: white;
     border-collapse: collapse;
     tbody{
+      
       tr{
+        
         td{
+          
+          
           background-color: white;
           padding-right: 0 !important;
           margin-right: 0 !important;
@@ -13,13 +18,12 @@
           img{
             width:35rem;
             height:30rem;
-            border-bottom: 10px solid black;
-            border-right: 10px solid black;
+            
             object-fit: contain;           
           }
           table {
             
-            border-bottom: 10px solid black;
+            
             padding: 0;
             margin: 0;
             padding-left: 0rem;
@@ -222,4 +226,3 @@
 
 //   }
   
-

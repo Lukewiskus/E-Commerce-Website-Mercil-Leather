@@ -222,7 +222,7 @@ const Admin = props => {
                             <td>
                             <Link to={'edit-homepage'}>
                             <Button className="btn addProduct">
-                                Edit Homepage
+                                Edit Gallery and About
                             </Button>
                             </Link>
                             </td>

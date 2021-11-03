@@ -1,27 +1,26 @@
-.contactMe {
-  padding-bottom: 30rem;
-  display: block;
-  margin: 0 auto;
-  ul li {
+.contact-wrapper{
+  width: 100%;
+  h1{
     text-align: center;
-    padding-top: 2rem;
-    text-transform: none;
-    list-style-type: none;
   }
-}
-
-@media only screen and (max-device-width: 480px) {
-  .contactMe {
-    padding-right: 5rem;
-    width: 40rem;
-    padding-bottom: 30rem;
-    display: block;
-    margin: 0 auto;
-    ul li {
+  .first-last{
+      width: 60%;
+      margin: 0 auto;
       text-align: center;
-      padding-top: 2rem;
-      text-transform: none;
-      list-style-type: none;
-    }
+  }
+  .subject-message{ 
+      margin: 0 auto;
+      width: 60%;
+  }
+  .message{
+      margin: 0 auto;
+      width: 60%;
+      textarea{
+          width:100%;
+          height:200px;
+      }
+  }
+  button{
+    width: 60%;
   }
 }

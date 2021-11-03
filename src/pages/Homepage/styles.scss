@@ -1,107 +1,51 @@
-.homepageWrapper {
-  p {
-    width: 100%;
-    font-size: 3rem;
-  }
-  table {
-    padding-bottom: 10rem;
-    width: 80%;
-    display: block;
-    margin: 0 auto;
-    tbody {
-      tr{
-        td{
-          height: 30rem;
-          .profileImage {
-            margin: 0 auto;
-            display: block;
-            width: 50rem;
-            height: 50rem;
-            object-fit: contain;
-            margin-right: 1rem;
-          }
-        }
-      }
-    }
-  }
-  .carouselWrapper {
-    width: 90%;
-    display: block;
-    margin: 0 auto;
-    .carousel {
-      height: auto;
+.homepage-wrapper{
+  .homepage-block-1{
+      width: 98%;
       margin: 0 auto;
-      padding-bottom: 10rem;
-      .carouselImage {
-        border: 15px solid black;
-        width: 100%;
-        height: 50rem;
-        object-fit: cover;
-      }
-    }
-  }
-  .galleryWord {
-    text-align: center;
-  }
-}
-
-@media only screen and (max-device-width: 480px) {
-  p {
-    width: 30rem;
-    margin: 0 auto;
-  }
-  .homepageWrapper {
-    margin: 0 auto;
-    width: 60%;
-    table tbody {
-      .row1 {
-        .imageOfBen {
+      margin-top: 10px;
+      img{
           width: 100%;
-          height: 30rem;
-          .profileImage {
-            margin: 0 auto;
-            display: block;
-            width: 40rem;
-            height: 60rem;
-            object-fit: contain;
-          }
-        }
+          height:auto;
+          object-fit: fill;
       }
-      .row2 {
-        .carouselWrapper {
-          width: 100%;
-          .carousel {
-            width: 100%;
-            height: auto;
-            margin: 0 auto;
-            padding-bottom: 10rem;
-            .carouselImage {
-              width: 50rem;
-              height: 50rem;
-              object-fit: contain;
-            }
-          }
-        }
-      }
-      .row3 {
-        .contactMeHomepage {
-          padding-bottom: 10rem;
-          width: 60rem;
-          ul {
-            display: block;
-            margin: 0 auto;
-            text-align: center;
-            li {
-              padding-top: 2rem;
-              h1 {
-                text-align: center;
-                text-transform: none;
-              }
-              list-style-type: none;
-            }
-          }
-        }
-      }
-    }
   }
+  .homepage-block-2{
+      display: flex;                  
+      flex-direction: row;            
+      flex-wrap: nowrap;             
+      justify-content: center;
+      margin: 0 auto;
+      margin-top: 50px;
+      .tile{
+          margin-left: 70px;
+          width:500px;
+          height: 700px;
+          img {
+              width: 100%;
+          }
+          .homepage-block-2-button{
+              border-radius: 20px;
+              width: 100px;
+              margin: 0 auto;
+              border: 2px solid black;
+              justify-content: center;
+              padding: 10px;
+              
+              
+          }
+      }
+      
+  }
+  .homepage-block-3{
+      width: 98%;
+      margin: 0 auto;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      img{
+          width: 100%;
+          height: auto;
+          object-fit: fill;
+      }
+  }
+  
 }

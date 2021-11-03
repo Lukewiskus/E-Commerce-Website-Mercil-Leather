@@ -32,6 +32,8 @@ const EditHomepage = () => {
     const [hideEditHomepageDescModal, setEditHomepageDescModal] = useState(true)
     const [homepageDescription, setHomepageDescription] = useState("")
     const {desc} = homepageDesc[0];
+
+    
     useEffect(() => {
         
         dispatch(
@@ -188,7 +190,7 @@ const EditHomepage = () => {
         </div>
         <div className="editHomepageDesc">
             <h1 className="editHomepageDesch1">
-                Edit Homepage Description
+                Edit About Description
             </h1>
             <span dangerouslySetInnerHTML={{__html: desc}} />
                 

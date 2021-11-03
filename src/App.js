@@ -33,6 +33,8 @@ import Recovery from './pages/Recovery';
 import Register from './pages/Register';
 import Admin from './pages/Admin';
 import ProductDetails from './pages/ProductDetails';
+import About from './pages/About'
+import Gallery from './pages/Gallery';
 // import Products from './pages/Products';
 
 const App = props =>  {
@@ -48,14 +50,27 @@ const App = props =>  {
   return (
     <div className="App">
       <Switch>
+      <Route exact path="/" render={() => (
+          <HomepageLayout>
+            <Homepage />
+            </HomepageLayout>
+        )} />
+        <Route path="/gallery"
+          render = {() => (
+            //withAuth makes it so you get redirected to login if you are not logged in trying to access it
+              <MainLayout>
+                  <Gallery/>
+              </MainLayout>
+          )}/>
       <Route path="/productedit/:editType" render={() => (
           <MainLayout>
             <EditProductPage />
           </MainLayout>
         )} />
-        <Route exact path="/" render={() => (
+        
+        <Route exact path="/about" render={() => (
           <HomepageLayout>
-            <Homepage />
+            <About />
             </HomepageLayout>
         )} />
         <Route path="/admin/:filterType"

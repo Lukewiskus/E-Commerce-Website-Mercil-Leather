@@ -36,7 +36,7 @@ const Header = props => {
                         <tr>
                             <td>
                                 <Link to="/">
-                                    <img className="logo" src="https://firebasestorage.googleapis.com/v0/b/mercil-leather-website.appspot.com/o/images%2FCard%202.jpg?alt=media&token=22977b75-4b18-427e-a862-9a14a97dd62d" />
+                                    <img className="logo" src={logo}/>
                                 </Link>
                             </td>
                             <td>
@@ -49,13 +49,19 @@ const Header = props => {
                                                 </Link>
                                             </td>
                                             <td>
-                                                <Link to="/">
+                                                <Link to="/about">
                                                     About
                                                 </Link>
                                             </td>
+
                                             <td className="leatherWork">
                                                 <Link className="products" to="/products">
                                                     Leather Work
+                                                </Link>
+                                            </td>
+                                            <td className="menuBars">
+                                                <Link to="/gallery" >
+                                                    Gallery
                                                 </Link>
                                             </td>
                                             <td>
@@ -76,36 +82,6 @@ const Header = props => {
                     </tbody>
                 </table>
             </div>
-            {/* <div className="navBar">
-                <table className="centerHead">
-                    <tbody>
-                        <tr>
-                            <td>
-                                
-                            </td>
-                            <td class>
-                                <table id="headerOptions">
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <Link to="#" className="menuBars">
-                                                    <FaIcons.FaBars onClick={showSideBar} />
-                                                </Link>
-                                            </td>
-
-                                            
-                                            </td>
-                                            
-                                            
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-
-                        </tr>
-                    </tbody>
-                </table>
-            </div> */}
             <IconContext.Provider value={{ color: 'white' }}>
 
                 <nav className={sidebar ? 'navMenu active' : 'navMenu'}>
@@ -184,4 +160,3 @@ const Header = props => {
 //the connect func was imported, and it calls the function we wrote above and thats how it functionally
 //goes through the code
 export default Header;
-
